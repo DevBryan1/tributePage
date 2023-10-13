@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat';
 }
 body{
     background-color: rgb(27, 27, 27);
@@ -17,16 +17,108 @@ body{
     background-size: contain;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
-.text {
+.container-text {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+}
+.texts {
     color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
     margin-right: 100px;
     margin-bottom: 150px;
 }
 .title {
+    color: #e0ea54;
     font-size: 70px;
+}
+.subtitle {
+    font-size: 40px;
+}
+.desc {
+    margin-top: 20px;
+    font-size: 20px;
+}
+.desc a {
+    color: #ffffff;
+    text-decoration: underline;
+    transition-duration: 1s;
+}
+.desc a:hover {
+    color: #e0ea54;
+}
+
+@media (max-width:1024px) {
+    .title {
+        font-size: 50px;
+    }
+    .subtitle {
+        font-size: 30px;
+    }
+    .desc {
+        font-size: 17px;
+    }
+    .texts {
+        margin-right: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        background-position: bottom;
+    }
+    .title {
+        font-size: 40px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .desc {
+        font-size: 15px;
+        margin-top: 10px;
+    }
+}
+@media (max-width:580px) {
+    .container{
+        justify-content: flex-start;
+        align-items: center;
+        background-size: 500px;
+        background-position-x: 35px;
+    }
+    .container-text {
+        justify-content: center;
+        margin-top: 60px;
+        margin-right: 0px;
+    }
+    .texts {
+        margin: auto;
+    }
+    .desc {
+        margin-top: 0px;
+    }
+}
+@media (max-width:320px) {
+    .container {
+        background-position-x: 0px;
+    }
+    .texts {
+        margin: auto;
+    }
+    .title {
+        font-size: 30px;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+    .desc {
+        font-size: 12px;
+    }
 }
